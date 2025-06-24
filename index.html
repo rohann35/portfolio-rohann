@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohan Yadav | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #212529;
+      line-height: 1.6;
+    }
+    nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.5));
+  padding: 12px 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid #facc15;
+}
+    nav a {
+  color: #facc15;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+}
+    nav a:hover {
+  background: #facc15;
+  color: #212529;
+  transform: scale(1.05);
+}
+    header {
+      text-align: center;
+      padding: 140px 20px 80px;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+    }
+    header img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 3px solid #facc15;
+      margin-bottom: 15px;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      opacity: 0.95;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      background: #facc15;
+      color: #212529;
+      font-weight: 500;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+    .btn:hover {
+      background: #ffe066;
+    }
+    section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  margin-top: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: fadeInUp 1.2s ease-out both;
+  transform-origin: center bottom;
+}
+    @keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  60% {
+    opacity: 0.6;
+    transform: translateY(-5px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    section h2 {
+      font-size: 2rem;
+      text-align: center;
+      color: #343a40;
+      margin-bottom: 40px;
+      border-bottom: 2px solid #facc15;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+    .project {
+      background: #ffffffcc;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .project:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+    .project h3 {
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+    .skills ul, .certs ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .skills li, .certs li {
+      background: #ffffffcc;
+      padding: 10px 20px;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    .skills li:hover, .certs li:hover {
+      background: #facc15;
+      color: #212529;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      background: #212529;
+      color: white;
+    }
+    footer a {
+      margin: 0 10px;
+      color: #facc15;
+      font-size: 1.4rem;
+      transition: color 0.3s;
+    }
+    footer a:hover {
+      color: #ffe066;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about"><i class="fas fa-user"></i> About</a>
+    <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+    <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+    <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+    <a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    <a href="https://ibb.co/RGhWVmTQ" download class="btn" style="padding: 8px 16px; font-size: 0.95rem;"><i class="fas fa-download"></i> Resume</a>
+</nav>
+
+  <header>
+    <img src="https://i.ibb.co/zWvbHb7/rohan-passport-img.jpg" alt="Rohan Yadav" style="margin-top: 20px;" />
+    <h1>Rohan Yadav</h1>
+    <p>Engineer |Developer | Learner</p>
+  </header>
+
+  
+
+  <section id="about">
+    <h2><i class="fas fa-user"></i> About Me</h2>
+    <p style="text-align: center; max-width: 700px; margin: auto;">I’m Rohan Yadav, a tech enthusiast driven by curiosity and creativity. 
+      I'm a 2024 B.E. graduate in Electronics & Telecommunication Engineering with a deep interest in software development.
+      Passionate about coding.I’m always excited to collaborate, explore new challenges, and keep growing as a developer.
+      Always eager to learn and build real-world impactful projects.</p>
+  </section>
+
+  <section id="education">
+    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+    <ul style="max-width: 700px; margin: auto; list-style: none; padding-left: 0;">
+      <li><strong>B.E. in Electronics & Telecommunication Engineering</strong> – PCCOER, Pune (2021–2024), CGPA: 7.92</li>
+      <li><strong>Diploma in Information Technology</strong> – PC Polytechnic, Pune (2018–2021), Aggregate: 91.69%</li>
+      <li><strong>SSC (10th)</strong> – MS High School, Pune (2017–2018), Percentage: 76.40%</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+    <div class="project">
+      <h3>IoT Weather Analysis System</h3>
+      <p>Predicts weather using real-time sensor data with GUI display. Sponsored by Aashay Measurements Pvt. Ltd.</p>
+    </div>
+    <div class="project">
+      <h3>Arts Valley - Social Media App</h3>
+      <p>Flutter-based platform for artists. Features: Upload art, follow system, comments, tutorials. Used Firebase & Figma.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2><i class="fas fa-code"></i> Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>Flutter</li>
+      <li>Java</li>
+      <li>C / C++</li>
+      <li>SQL</li>
+      <li>Git & GitHub</li>
+      <li>Figma</li>
+    </ul>
+  </section>
+
+  <section id="certifications" class="certs">
+    <h2><i class="fas fa-certificate"></i> Certifications</h2>
+    <ul>
+      <li>CPP Programming - Udemy</li>
+      <li> Copyright for Weather Analysis project</li>
+      <li>Google IT Automation with Python – Google(coursera)</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+  <h2><i class="fas fa-envelope"></i> Contact</h2>
+  <div style="text-align: center; line-height: 2;">
+    <p><i class="fas fa-envelope"></i> rohankisanyadav153@gmail.com</p>
+    <p><i class="fas fa-phone"></i> 9325506939</p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/rohan-yadav-ab877a200?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">linkedin.com/in/sjbycncib</a></p>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2025 Rohan Yadav</p>
+  </footer>
+</body>
+</html>
